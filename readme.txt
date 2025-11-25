@@ -5,7 +5,7 @@ Tags: development, boilerplate, composer, events, calendar
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 8.2
-Stable tag: 1.900.0
+Stable tag: 1.900.1
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
