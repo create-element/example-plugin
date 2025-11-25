@@ -1,0 +1,56 @@
+{
+  "name": "power-plugins/example-plugin",
+  "description": "Example WordPress plugin - boilerplate for Power Plugins development",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Paul Faulkner",
+      "email": "paul@power-plugins.com"
+    }
+  ],
+  "require": {
+    "php": ">=8.1",
+    "power-plugins/core": "@dev",
+    "power-plugins/updater": "@dev"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.7",
+    "phpstan/phpstan": "^1.10",
+    "wp-coding-standards/wpcs": "^3.0"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../../../wp-content/libraries/pp-core",
+      "options": {
+        "symlink": true
+      }
+    },
+    {
+      "type": "path",
+      "url": "../../../wp-content/libraries/pp-updater",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "includes/"
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  },
+  "scripts": {
+    "phpcs": "phpcs --standard=PSR12 includes/",
+    "phpcbf": "phpcbf --standard=PSR12 includes/",
+    "phpstan": "phpstan analyse includes/ --level=5"
+  }
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="Example Plugin Coding Standards" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+
+	<description>Example Plugin coding standards configuration</description>
+
+	<!-- What to scan -->
+	<file>.</file>
+
+	<!-- Exclude patterns -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/tests/*</exclude-pattern>
+	<exclude-pattern>*/assets/*</exclude-pattern>
+	<exclude-pattern>*/languages/*</exclude-pattern>
+	<exclude-pattern>*/pp-assets/*</exclude-pattern>
+	<exclude-pattern>*/pwpl/*</exclude-pattern>
+	<exclude-pattern>pp-core.php</exclude-pattern>
+
+	<!-- How to scan -->
+	<arg value="sp"/> <!-- Show sniff and progress -->
+	<arg name="basepath" value="."/><!-- Strip the file paths down to the relevant bit -->
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/><!-- Enables parallel processing when available for faster results. -->
+
+	<!-- Rules: Check PHP version compatibility -->
+	<config name="testVersion" value="8.1-"/>
+
+	<!-- Rules: WordPress Coding Standards (with modern PHP practices) -->
+	<rule ref="WordPress-Core">
+		<!-- Allow modern PHP syntax -->
+		<exclude name="Universal.Operators.DisallowShortTernary"/>
+	</rule>
+
+	<rule ref="WordPress-Docs"/>
+
+	<!-- Modern PHP and Composer-friendly adjustments -->
+	
+	<!-- Allow short array syntax [] instead of array() -->
+	<rule ref="Generic.Arrays.DisallowShortArraySyntax">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+	</rule>
+
+	<!-- Allow namespaced classes (PSR-4) with class- prefix in filenames -->
+	<rule ref="WordPress.Files.FileName">
+		<properties>
+			<property name="strict_class_file_names" value="false"/>
+		</properties>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+	</rule>
+
+	<!-- Allow use of declare(strict_types=1) -->
+	<rule ref="PSR1.Files.SideEffects">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Modern spacing for readability -->
+	<rule ref="WordPress.WhiteSpace.OperatorSpacing">
+		<properties>
+			<property name="ignoreNewlines" value="true"/>
+		</properties>
+	</rule>
+
+	<!-- Relax line length for modern displays -->
+	<rule ref="Generic.Files.LineLength">
+		<properties>
+			<property name="lineLimit" value="120"/>
+			<property name="absoluteLineLimit" value="150"/>
+		</properties>
+	</rule>
+
+	<!-- Allow modern brace styles for better IDE support -->
+	<rule ref="Squiz.Functions.MultiLineFunctionDeclaration">
+		<properties>
+			<property name="indent" value="4"/>
+		</properties>
+	</rule>
+
+	<!-- Don't require file comments on every file -->
+	<rule ref="Squiz.Commenting.FileComment">
+		<severity>0</severity>
+	</rule>
+
+	<!-- Hook priorities are fine without documentation -->
+	<rule ref="WordPress.WP.AlternativeFunctions">
+		<properties>
+			<property name="exclude" value="file_get_contents,file_system_read"/>
+		</properties>
+	</rule>
+
+	<!-- Allow Yoda conditions to be turned off -->
+	<rule ref="WordPress.PHP.YodaConditions">
+		<severity>0</severity>
+	</rule>
+
+</ruleset>

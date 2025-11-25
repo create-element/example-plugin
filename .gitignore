@@ -1,0 +1,21 @@
+# Composer
+/vendor/
+composer.lock
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+
+# WordPress
+*.log
+
+# Legacy files (keep for reference, don't commit)
+pp-core.php
+pp-assets/
+pwpl/

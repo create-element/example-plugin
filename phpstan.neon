@@ -1,0 +1,35 @@
+parameters:
+	level: 5
+	paths:
+		- includes/
+	excludePaths:
+		- includes/class-admin-hooks.php
+		- includes/class-public-hooks.php
+		- includes/class-settings.php
+	scanFiles:
+		- example-plugin.php
+		- constants.php
+		- functions.php
+	bootstrapFiles:
+		- vendor/autoload.php
+	ignoreErrors:
+		# WordPress functions are not defined in static analysis
+		- '#Undefined function (add_action|add_filter|register_activation_hook|register_deactivation_hook)#'
+		- '#Undefined function (get_option|update_option|delete_option)#'
+		- '#Undefined function (is_admin|wp_doing_ajax|current_user_can)#'
+		- '#Undefined function (plugin_dir_path|plugin_dir_url|plugin_basename)#'
+		- '#Undefined function (trailingslashit|esc_html|esc_attr|esc_url)#'
+		- '#Undefined function (wp_nonce_field|wp_verify_nonce|get_admin_page_title)#'
+		- '#Undefined function (load_plugin_textdomain|flush_rewrite_rules)#'
+		- '#Undefined function (get_post|get_posts|wp_insert_post|wp_update_post)#'
+		- '#Undefined function (get_term|get_terms|wp_insert_term|get_the_terms)#'
+		- '#Undefined function (get_post_meta|update_post_meta|delete_post_meta)#'
+		- '#Undefined function (get_term_meta|update_term_meta|delete_term_meta)#'
+		- '#Undefined function (get_post_field|get_post_thumbnail_id|get_post_type_object)#'
+		- '#Undefined function (sanitize_hex_color|sanitize_title|wp_timezone)#'
+		- '#Undefined function (get_page_by_path|wp_parse_args|is_wp_error)#'
+		- '#Undefined function (wp_suspend_cache_addition|get_term_by)#'
+		- '#Undefined function (wp_get_attachment_url)#'
+		- '#Undefined constant (WP_DEBUG|ABSPATH|DOING_AUTOSAVE)#'
+		- '#Undefined constant (OBJECT)#'
+		- '#Undefined type ExamplePlugin\\(AdminHooks|PublicHooks|Settings)#'
