@@ -3,7 +3,7 @@
  * Plugin Name:       Example Plugin
  * Plugin URI:        https://power-plugins.com/plugins/example-plugin
  * Description:       An example Power Plugin demonstrating modern development practices with Composer, PSR-4 autoloading, and the Power Plugins Core library.
- * Version:           1.900.0
+ * Version:           1.900.1
  * Requires at least: 6.0
  * Requires PHP:      8.2
  * Author:            Power Plugins
@@ -21,7 +21,7 @@
 defined( 'ABSPATH' ) || die();
 
 const PP_EXP_NAME    = 'example-plugin';
-const PP_EXP_VERSION = '1.900.0';
+const PP_EXP_VERSION = '1.900.1';
 
 define( 'PP_EXP_FILE', __FILE__ );
 define( 'PP_EXP_DIR', plugin_dir_path( __FILE__ ) );
@@ -32,6 +32,9 @@ define( 'PP_EXP_EMAIL_TEMPLATES_DIR', trailingslashit( PP_EXP_DIR . 'email-templ
 define( 'PP_EXP_EMAIL_TEMPLATES', trailingslashit( PP_EXP_DIR . 'email-templates' ) );
 define( 'PP_EXP_ASSETS_DIR', trailingslashit( PP_EXP_DIR . 'assets' ) );
 define( 'PP_EXP_ASSETS_URL', trailingslashit( PP_EXP_URL . 'assets' ) );
+
+// Set to true to disable automatic updates in the pwpl updater library.
+define( 'PP_DISABLE_AUTO_UPDATES', true );
 
 /**
  * ============================================================================

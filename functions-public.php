@@ -1,13 +1,12 @@
 <?php
+
 /**
- * Project-scope constants.
+ * Public functions.
  *
  * @package ExamplePlugin
  * @since 1.0.0
  */
 
-namespace ExamplePlugin;
-
 defined( 'ABSPATH' ) || die();
 
-// Constants in here...
+// Public functions in here...

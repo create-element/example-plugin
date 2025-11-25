@@ -1,7 +1,7 @@
 === Example Plugin ===
 Contributors: headwalluk
 Donate link: https://power-plugins.com/
-Tags: development, boilerplate, composer, psr-4
+Tags: development, boilerplate, composer, events, calendar
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 8.2
@@ -9,11 +9,11 @@ Stable tag: 1.900.0
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Modern WordPress plugin boilerplate demonstrating best practices with Composer, PSR-4 autoloading, and the Power Plugins Core library.
+Modern WordPress plugin boilerplate demonstrating best practices with Composer, PSR-4 autoloading, and the Power Plugins Core library through a simple events calendar implementation.
 
 == Description ==
 
-Example Plugin is a development boilerplate that showcases modern WordPress plugin development practices:
+Example Plugin is a development boilerplate that showcases modern WordPress plugin development practices by implementing a simple events calendar system:
 
 * **Composer Package Management** - Dependencies managed via Composer with PSR-4 autoloading
 * **Modern PHP Standards** - PHP 8.2+ with strict types, namespaces, and type declarations
@@ -21,15 +21,22 @@ Example Plugin is a development boilerplate that showcases modern WordPress plug
 * **WordPress Coding Standards** - PHPCS configured for WordPress-Core standards
 * **Static Analysis** - PHPStan integration for code quality
 * **Component Architecture** - Separated admin, public, and settings components
+* **Custom Post Types** - Event CPT demonstrating Post and PostController classes
+* **Meta Boxes** - Event details meta box with date, location, capacity fields
+* **Settings API** - Plugin settings page using SettingsCore
 * **Well Documented** - Comprehensive PHPDoc comments and development documentation
 
-This plugin serves as a reference implementation and starting point for developing premium WordPress plugins using modern development practices.
+The plugin implements a simple events calendar with custom post types, meta boxes, and settings to demonstrate real-world usage of the Power Plugins Core library. This serves as both a reference implementation and a testing ground for the Core library API.
 
 == Developer Features ==
 
 * PSR-4 autoloading via Composer
 * Namespaced classes (ExamplePlugin\)
 * Component-based architecture
+* Custom Post Type implementation (Event)
+* Post meta management with type safety
+* Custom admin columns
+* Meta box framework
 * Settings API integration
 * Hook management system
 * Development workflow documentation

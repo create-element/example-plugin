@@ -2,7 +2,18 @@
 
 **Goal:** Build a working example plugin to validate and test the Power Plugins Core library and modern development workflow.
 
-**Strategy:** Implement a simple Events custom post type with settings, demonstrating all core library features.
+**Strategy:** Implement a simple events calendar plugin using a custom Event post type (representing calendar events like conferences, meetups, webinars, etc.), demonstrating all core library features through real-world usage.
+
+**What is "Event"?** 
+Event refers to calendar events (e.g., "WordPress Meetup", "Annual Conference", "Product Launch") - NOT system events or cron jobs. This example showcases how to build a small events & calendar plugin using the Power Plugins Core library.
+
+**Why Events Calendar?**
+- Demonstrates custom post types with meaningful meta fields (date, location, capacity)
+- Shows meta box implementation for event details
+- Requires settings (date formats, display options)
+- Provides frontend display challenges (date formatting, virtual badges)
+- Real-world use case that developers can understand and extend
+- Tests Post/PostController caching with date-based queries
 
 ---
 
@@ -62,18 +73,24 @@
 
 ## Milestone 3: Custom Post Type - Event 🎯 CURRENT
 
-**Goal:** Create Event custom post type using Power Plugins Core classes
+**Goal:** Create Event custom post type (calendar events) using Power Plugins Core classes
 
 **Next Session:** Start with Event Post Object implementation
+
+**Event Details:**
+- Post type slug: `pp_event`
+- Represents calendar events (conferences, meetups, webinars, etc.)
+- Meta fields: date, location, capacity, virtual status
+- Will demonstrate: custom admin columns, meta boxes, date handling, settings integration
 
 ### 3.1: Event Post Object
 
 - [ ] Create `includes/Post/class-event.php`
 - [ ] Extend `PowerPlugins\Core\Post\Post`
-- [ ] Add custom meta field: `event_date` (date)
-- [ ] Add custom meta field: `event_location` (string)
-- [ ] Add custom meta field: `event_capacity` (int)
-- [ ] Add custom meta field: `event_is_virtual` (bool)
+- [ ] Add custom meta field: `event_date` (DateTime - when the event occurs)
+- [ ] Add custom meta field: `event_location` (string - physical address or "Online")
+- [ ] Add custom meta field: `event_capacity` (int - maximum attendees)
+- [ ] Add custom meta field: `event_is_virtual` (bool - online vs in-person)
 - [ ] Implement getter/setter methods using parent class helpers
 - [ ] Test meta field storage and retrieval
 
@@ -155,17 +172,18 @@
 
 ## Milestone 5: Frontend Display
 
-**Goal:** Display events on the frontend
+**Goal:** Display calendar events on the frontend
 
 ### Tasks
 
 - [ ] Create single event template override or use `the_content` filter
 - [ ] Display event meta fields (date, location, capacity, virtual status)
-- [ ] Use settings to format date display
-- [ ] Show/hide virtual badge based on settings
-- [ ] Create archive template for events listing
-- [ ] Add basic CSS for event display
+- [ ] Use settings to format date display (e.g., "Friday, December 15, 2025")
+- [ ] Show/hide virtual badge based on settings (e.g., "🌐 Virtual Event")
+- [ ] Create archive template for events listing (calendar view or list)
+- [ ] Add basic CSS for event cards/display
 - [ ] Enqueue CSS on frontend only
+- [ ] Consider upcoming vs past event styling
 
 ### Validation
 
