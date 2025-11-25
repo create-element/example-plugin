@@ -5,7 +5,7 @@
  * Description:       An example Power Plugin demonstrating modern development practices with Composer, PSR-4 autoloading, and the Power Plugins Core library.
  * Version:           1.900.0
  * Requires at least: 6.0
- * Requires PHP:      8.1
+ * Requires PHP:      8.2
  * Author:            Power Plugins
  * Author URI:        https://power-plugins.com/
  * License:           GPL v3 or later

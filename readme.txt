@@ -4,7 +4,7 @@ Donate link: https://power-plugins.com/
 Tags: development, boilerplate, composer, psr-4
 Requires at least: 6.0
 Tested up to: 6.7
-Requires PHP: 8.1
+Requires PHP: 8.2
 Stable tag: 1.900.0
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -16,7 +16,7 @@ Modern WordPress plugin boilerplate demonstrating best practices with Composer, 
 Example Plugin is a development boilerplate that showcases modern WordPress plugin development practices:
 
 * **Composer Package Management** - Dependencies managed via Composer with PSR-4 autoloading
-* **Modern PHP Standards** - PHP 8.1+ with strict types, namespaces, and type declarations
+* **Modern PHP Standards** - PHP 8.2+ with strict types, namespaces, and type declarations
 * **Power Plugins Core Library** - Built on the Power Plugins Core component architecture
 * **WordPress Coding Standards** - PHPCS configured for WordPress-Core standards
 * **Static Analysis** - PHPStan integration for code quality
@@ -67,7 +67,7 @@ This is a development example. You should use it as a starting point and customi
 = What are the requirements? =
 
 * WordPress 6.0 or higher
-* PHP 8.1 or higher
+* PHP 8.2 or higher
 * Composer (for dependency management)
 * Power Plugins Core library
 * Power Plugins Updater library

@@ -24,7 +24,7 @@
 	<arg name="parallel" value="8"/><!-- Enables parallel processing when available for faster results. -->
 
 	<!-- Rules: Check PHP version compatibility -->
-	<config name="testVersion" value="8.1-"/>
+	<config name="testVersion" value="8.2-"/>
 
 	<!-- Rules: WordPress Coding Standards (with modern PHP practices) -->
 	<rule ref="WordPress-Core">
