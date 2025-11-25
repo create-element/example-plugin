@@ -3,7 +3,7 @@
  * Plugin Name:       Example Plugin
  * Plugin URI:        https://power-plugins.com/plugins/example-plugin
  * Description:       An example Power Plugin demonstrating modern development practices with Composer, PSR-4 autoloading, and the Power Plugins Core library.
- * Version:           1.0.6
+ * Version:           1.900.0
  * Requires at least: 6.0
  * Requires PHP:      8.1
  * Author:            Power Plugins
@@ -21,7 +21,7 @@
 defined( 'ABSPATH' ) || die();
 
 const PP_EXP_NAME    = 'example-plugin';
-const PP_EXP_VERSION = '1.0.6';
+const PP_EXP_VERSION = '1.900.0';
 
 define( 'PP_EXP_FILE', __FILE__ );
 define( 'PP_EXP_DIR', plugin_dir_path( __FILE__ ) );

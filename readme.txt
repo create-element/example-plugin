@@ -5,7 +5,7 @@ Tags: development, boilerplate, composer, psr-4
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 8.1
-Stable tag: 1.0.6
+Stable tag: 1.900.0
 License: GPL v3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -74,7 +74,7 @@ This is a development example. You should use it as a starting point and customi
 
 == Changelog ==
 
-= 1.0.6 =
+= 1.900.0 =
 *Released 25th November 2024*
 
 * Complete rewrite as modern WordPress plugin boilerplate
